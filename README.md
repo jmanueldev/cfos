@@ -105,9 +105,14 @@ CFOS continuously improves:
 - and workload completion times.
 
 
+
 # Architecture
 
 ```text
+
+![Uploading image.png…]()
+
+## Logical components
 +--------------------------------------------------------------------------------+
 |                            Cognitive Fabric OS                                 |
 +--------------------------------------------------------------------------------+
