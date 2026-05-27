@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package cfos;
+
+service CognitiveFabric {
+
+  rpc SubmitIntent(IntentRequest)
+      returns (IntentResponse);
+
+  rpc StreamEvents(EventRequest)
+      returns (stream FabricEvent);
+}
+
+message IntentRequest {
+  string workload_id = 1;
+  string objective = 2;
+}
+
+message IntentResponse {
+  string execution_plan_id = 1;
+}
+
+message EventRequest {
+  string stream = 1;
+}
+
+message FabricEvent {
+  string type = 1;
+  string payload = 2;
+}

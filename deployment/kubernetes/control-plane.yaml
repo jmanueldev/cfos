@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cfos-control-plane
+
+spec:
+  replicas: 5
+
+  selector:
+    matchLabels:
+      app: cfos
+
+  template:
+    metadata:
+      labels:
+        app: cfos
+
+    spec:
+      containers:
+      - name: scheduler
+        image: ghcr.io/cfos/scheduler:latest

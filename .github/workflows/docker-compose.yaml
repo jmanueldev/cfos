@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+
+  scheduler:
+    build:
+      context: ./control-plane
+    ports:
+      - "50051:50051"
+
+  neo4j:
+    image: neo4j:5
+    environment:
+      NEO4J_AUTH: neo4j/password
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+  nats:
+    image: nats:2.10
+    command:
+      - "-js"
+    ports:
+      - "4222:4222"
+
+  foundationdb:
+    image: foundationdb/foundationdb:7.1.57
+
+  prometheus:
+    image: prom/prometheus
+
+  grafana:
+    image: grafana/grafana
