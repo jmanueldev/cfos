@@ -14,6 +14,18 @@ Instead of static orchestration, CFOS introduces:
 - sovereign compliance enforcement,
 - and continuously evolving infrastructure intelligence.
 
+# Features
+
+- Intent-based orchestration
+- Reinforcement learning scheduler
+- Predictive topology optimization
+- Energy-aware placement
+- Sovereign execution enforcement
+- eBPF telemetry
+- Knowledge graph infrastructure reasoning
+- WASM runtime isolation
+- FoundationDB distributed state
+- NATS event fabric
 
 # Vision
 
